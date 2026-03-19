@@ -1,7 +1,7 @@
-import Todo from './components/Todo'
+import Login from './pages/Login'
 
 const App = () => {
-  return<Todo/>
+  return<Login />
   
 }
 

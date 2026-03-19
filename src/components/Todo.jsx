@@ -50,7 +50,7 @@ const Todo = () => {
             type="text"
             placeholder='Add new task'/>
             
-            <button onClick={addTodo}
+           <button onClick={addTodo}
              className='border-none rounded-full bg-amber-600 w-24 sm:w-28 md:w-32 h-12 sm:h-14 text-white text-sm sm:text-base md:text-lg
              font-medium cursor-pointer transform transition-transform duration-200 hover:scale-110'
              >ADD<i className="fa-solid fa-plus"></i>
