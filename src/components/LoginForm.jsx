@@ -3,7 +3,7 @@ const Loginform = ({active}) => {
   return(
 
         <div className={`absolute right-0 w-1/2 h-full flex items-center text-center p-15 z-30
-        transition-all duration-700 delay-200
+        transition-all duration-600 delay-200
         ${active ? "`translate-x-full opacity-0" : "translate-x-0 opacity-100"}`}>
             <form className="w-full">
                     <h1 className={`text-2xl font-Gummy font-bold mb-6 cursor-default
