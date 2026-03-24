@@ -1,5 +1,5 @@
 
-const Registerform = ({active}) => {
+const Registerform = ({active, showPassword, setShowPassword, setSeeCoPassword, seeCoPassword}) => {
  return ( 
     <div className={`absolute left-0 w-1/2 h-full flex items-center text-center p-15 z-30
     transition-all duration-600 delay-300
@@ -30,18 +30,30 @@ const Registerform = ({active}) => {
             
             <div className={`relative my-6 transition-all duration-600 opacity-100 delay-150 ${active ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`}>
                 <input 
-                    type="password"
-                    placeholder="Password"
+                    type= {showPassword ? "text" : "password"}
+                    placeholder="Input your Password"
                     className=" w-full py-3 pl-5 pr-10 bg-gray-300 rounded-full outline-none" 
                 />
+
+                <button type="button" onClick={() => setShowPassword(prev => !prev)}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+                    {showPassword ? ( <i class="fa-solid fa-eye"></i>) : ( <i class="fa-regular fa-eye-slash"></i>)}
+                </button>
+
             </div>
 
             <div className={`relative my-6 transition-all duration-600 opacity-100 delay-100 ${active ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0" }`}>
                 <input 
-                    type="Password"
+                    type={seeCoPassword ? "text" : "Password"}
                     placeholder="Confirm your Password"
                     className=" w-full py-3 pl-5 pr-10 bg-gray-300 rounded-full outline-none" 
                 />
+
+                <button type="button" onClick={() => setSeeCoPassword(prev => !prev)}
+                    className="absolute right-3 top-2/10 transform -transalate-y-1/2 cursor-pointer">
+                    {seeCoPassword ? (<i class="fa-solid fa-eye"></i>) : <i class="fa-regular fa-eye-slash"></i>}
+                </button>
+
             </div>
 
             <button className={`w-full py-3 pl-5 pr-10 bg-amber-500 rounded-full font-semibold hover:bg-amber-600 hover:scale-105 transition duration-300 cursor-pointer
